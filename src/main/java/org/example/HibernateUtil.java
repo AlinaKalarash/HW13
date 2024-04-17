@@ -20,7 +20,7 @@ public class HibernateUtil {
         this.sessionFactory = new Configuration()
                 .addAnnotatedClass(Client.class)
                 .buildSessionFactory();
-        flywayMigration("jdbc:postgresql://localhost:32771/ladatabase",
+        flywayMigration("jdbc:postgresql://localhost:32768/ladatabase",
                 "postgres", "123");
     }
 
