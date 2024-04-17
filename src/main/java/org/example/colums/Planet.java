@@ -1,4 +1,4 @@
-package org.example;
+package org.example.colums;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -17,4 +17,19 @@ public class Planet {
     @Column(name = "name", length = 500)
     private String name;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

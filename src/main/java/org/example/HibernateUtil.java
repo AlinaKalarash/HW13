@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.colums.Client;
 import org.flywaydb.core.Flyway;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
