@@ -7,12 +7,14 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "client")
+@Table(name = "planet")
 @Data
-public class Client {
-    @Id
-    private long id;
+public class Planet {
 
-    @Column(name = "name", length = 200)
+    @Id
+    private String id;
+
+    @Column(name = "name", length = 500)
     private String name;
+
 }
