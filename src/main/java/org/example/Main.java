@@ -32,7 +32,7 @@ public class Main {
         PlanetCrudService planetService = new PlanetCrudService();
 
         Planet planet = new Planet();
-        planet.setId("hfg");
+        planet.setId("L5K");
         planet.setName("Mars");
         planetService.savePlanet(planet);
 //        planetService.deletePlanet(planetService.findPlanetById("NER"));

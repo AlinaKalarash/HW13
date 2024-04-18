@@ -4,6 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Entity
@@ -14,7 +15,8 @@ public class Client {
     @Id
     private long id;
 
-    @Column(name = "name", length = 200)
+    @Column(name = "name")
+    @Size(min = 3, max = 200)
     private String name;
 
     public long getId() {
