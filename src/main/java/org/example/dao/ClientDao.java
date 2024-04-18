@@ -1,7 +1,7 @@
 package org.example.dao;
 
 import org.example.HibernateUtil;
-import org.example.colums.Client;
+import org.example.entity.Client;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

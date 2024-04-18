@@ -1,7 +1,7 @@
 package org.example;
 
-import org.example.colums.Client;
-import org.example.services.ClientCrudService;
+import org.example.entity.Planet;
+import org.example.services.PlanetCrudService;
 import org.hibernate.Session;
 
 public class Main {
@@ -12,21 +12,31 @@ public class Main {
 
         //Some Test Here
 
-        ClientCrudService clientService = new ClientCrudService();
+//        ClientCrudService clientService = new ClientCrudService();
+//
+//        Client client = new Client();
+//        client.setName("Katya");
+//        client.setId(11);
+//        clientService.saveClient(client);
+//
+//        clientService.findClientById(11);
+//
+//        client.setName("Kos");
+//        clientService.updateClient(client);
+//
+//        clientService.findClientById(11);
+//
+//        Client client1 = clientService.findClientById(11);
+//        clientService.deleteClient(client1);
 
-        Client client = new Client();
-        client.setName("Katya");
-        client.setId(11);
-        clientService.saveClient(client);
+        PlanetCrudService planetService = new PlanetCrudService();
 
-        clientService.findClientById(11);
+        Planet planet = new Planet();
+        planet.setId("hfg");
+        planet.setName("Mars");
+        planetService.savePlanet(planet);
+//        planetService.deletePlanet(planetService.findPlanetById("NER"));
 
-        client.setName("Kos");
-        clientService.updateClient(client);
 
-        clientService.findClientById(11);
-
-        Client client1 = clientService.findClientById(11);
-        clientService.deleteClient(client1);
     }
 }

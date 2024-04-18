@@ -1,6 +1,7 @@
 package org.example;
 
-import org.example.colums.Client;
+import org.example.entity.Client;
+import org.example.entity.Planet;
 import org.flywaydb.core.Flyway;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -20,6 +21,7 @@ public class HibernateUtil {
     private HibernateUtil() {
         this.sessionFactory = new Configuration()
                 .addAnnotatedClass(Client.class)
+                .addAnnotatedClass(Planet.class)
                 .buildSessionFactory();
         flywayMigration("jdbc:postgresql://localhost:32768/ladatabase",
                 "postgres", "123");

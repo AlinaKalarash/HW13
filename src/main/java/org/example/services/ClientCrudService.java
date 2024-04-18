@@ -1,6 +1,6 @@
 package org.example.services;
 
-import org.example.colums.Client;
+import org.example.entity.Client;
 import org.example.dao.ClientDao;
 
 public class ClientCrudService {

@@ -1,13 +1,13 @@
 package org.example.dao;
 
 import org.example.HibernateUtil;
-import org.example.colums.Planet;
+import org.example.entity.Planet;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 public class PlanetDao {
-    SessionFactory sessionFactory = HibernateUtil.getInstance().getSessionFactory();
+    private SessionFactory sessionFactory = HibernateUtil.getInstance().getSessionFactory();
 
     public void save(Planet planet) {
         try(Session session = sessionFactory.openSession()) {

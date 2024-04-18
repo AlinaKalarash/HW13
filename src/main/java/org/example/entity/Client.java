@@ -1,4 +1,4 @@
-package org.example.colums;
+package org.example.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -7,21 +7,21 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "planet")
+@Table(name = "client")
 @Data
-public class Planet {
 
+public class Client {
     @Id
-    private String id;
+    private long id;
 
-    @Column(name = "name", length = 500)
+    @Column(name = "name", length = 200)
     private String name;
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 
