@@ -1,12 +1,11 @@
 package org.example.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+
+import java.util.List;
 import java.util.regex.*;
 
 @Entity
@@ -21,6 +20,13 @@ public class Planet {
     @Column(name = "name")
     @Size(min = 1, max = 500)
     private String name;
+
+    @OneToMany(mappedBy = "from_planet")
+    private List<Ticket> tickets;
+
+    @OneToMany(mappedBy = "to_planet")
+    private List<Ticket> tickets1;
+
 
     public String getId() {
         return id;

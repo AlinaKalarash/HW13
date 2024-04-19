@@ -1,11 +1,10 @@
 package org.example.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+
+import java.util.List;
 
 @Entity
 @Table(name = "client")
@@ -18,6 +17,9 @@ public class Client {
     @Column(name = "name")
     @Size(min = 3, max = 200)
     private String name;
+
+    @OneToMany(mappedBy = "client")
+    private List<Ticket> tickets;
 
     public long getId() {
         return id;
